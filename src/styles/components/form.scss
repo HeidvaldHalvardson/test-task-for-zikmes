@@ -1,0 +1,127 @@
+$transform: skewX(-45deg);
+$detransform: skewX(45deg);
+
+.form {
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.form__inner {
+  position: relative;
+  display: flex;
+}
+
+.form__label {
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+
+  &:focus-within {
+    border: 2px solid #000000;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: $transform;
+  }
+}
+
+.form__field {
+  border: none;
+  background: transparent;
+  width: 200px;
+  height: 36px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+  }
+
+  &:active,
+  &:focus  {
+    border:none;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #606060;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 300px;
+    transform: $detransform;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.form__field-error,
+.form__field-success {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.form__field-error {
+  color: #d91d1d;
+}
+
+.form__field-success {
+  color: #7fff00;
+}
+
+.form__field-error--remove,
+.form__field-success--remove {
+  display: none;
+}
+
+.form__button-wrapper {
+  border: 2px solid #ffffff;
+  background-color: #d91d1d;
+
+  &:hover {
+    background-color: #ff7676;
+  }
+
+  &:focus-within {
+    border: 2px solid #000000;
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: $transform;
+  }
+}
+
+.form__button {
+  width: 120px;
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  &:active,
+  &:focus  {
+    border:none;
+    outline: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 180px;
+    transform: $detransform;
+  }
+}
+
+.form__button-text {
+  transform: $detransform;
+}

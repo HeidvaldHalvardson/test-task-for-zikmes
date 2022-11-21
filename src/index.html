@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://use.fontawesome.com/9f7e4bdfe7.js"></script>
+  <title>Form</title>
+</head>
+<body>
+  <form id="form" class="form" method="post" action="https://echo.htmlacademy.ru">
+    <div class="form__inner">
+      <label class="form__label">
+        <span class="visually-hidden">Введи номер</span>
+        <input id="phone" class="form__field" type="tel" name="phone" placeholder="Ваш номер..." >
+      </label>
+      <span id="error" class="form__field-error form__field-error--remove">Поле не может быть пустым</span>
+      <span id="success" class="form__field-success form__field-success--remove">Успешно отправлено</span>
+    </div>
+    <div class="form__button-wrapper">
+      <button id="button" class="form__button" type="submit">
+        <span class="form__button-text">Заказать</span>
+        <i class="fa fa-phone" aria-hidden="true"></i>
+      </button>
+    </div>
+  </form>
+  <i class="fas fa-user"></i>
+</body>
+</html>
